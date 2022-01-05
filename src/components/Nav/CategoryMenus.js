@@ -37,7 +37,6 @@ const SideCategoryMenu = () => {
     <List>
       <ListItem>
         <ListItemText
-          primary="BEST OF YOUTUBE"
           classes={{ primary: classes.title }}
         />
       </ListItem>

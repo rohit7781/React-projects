@@ -8,10 +8,10 @@ import { withRouter } from "react-router";
 const useStyles = makeStyles((theme) => ({
   searchButton: {
     color: grey[700],
-    backgroundColor: grey[200],
+    backgroundColor: grey[500],
     "&:hover": {
       //you want this to be the same as the backgroundColor above
-      backgroundColor: grey[200],
+      backgroundColor: grey[500],
     },
     "&:focus": {
       outline: "none",
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
   },
   searchForm: {
-    backgroundColor: "white",
+    backgroundColor: "#222329",
     width: "100%",
   },
   input: {

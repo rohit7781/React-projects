@@ -20,9 +20,12 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "0px",
   },
   iconButton: {
+    backgroundColor: "black",
+    color: "white",
     "&:hover": {
       //you want this to be the same as the backgroundColor above
-      backgroundColor: "white",
+      backgroundColor: "black",
+      color: "white",
     },
     "&:focus": {
       outline: "white",

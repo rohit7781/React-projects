@@ -6,6 +6,8 @@ import SideNav from "./SideNav";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    backgroundColor:"#222327",
+    color:"white",
     display: "flex",
   },
   content: {

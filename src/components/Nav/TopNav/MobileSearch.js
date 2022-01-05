@@ -9,11 +9,15 @@ import { setMobileSearch } from "../../../redux/actions/layout";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor:"black",
   },
   backButton: {
+    backgroundColor:"black",
+    color:"white",
     "&:hover": {
       //you want this to be the same as the backgroundColor above
-      backgroundColor: "white",
+      color:"white",
+      backgroundColor: "black",
     },
     "&:focus": {
       outline: "white",

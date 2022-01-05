@@ -24,8 +24,12 @@ import UploadModal from "../../Upload/UploadModal";
 
 const useStyles = makeStyles((theme) => ({
   iconButton: {
+    color:"white",
+    backgroundColor:"black",
+    
     "&:hover": {
-      backgroundColor: "white",
+      backgroundColor: "black",
+      color:"white",
     },
     "&:focus": {
       outline: "white",
@@ -121,7 +125,7 @@ const NavVideoMenuBtn = () => {
           </ClickAwayListener>
         </Paper>
       </Popper>
-      )}
+      )
     </>
   );
 };

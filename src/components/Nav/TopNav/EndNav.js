@@ -15,11 +15,16 @@ import NavVidMenuBtn from "./NavVidMenuBtn";
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     paddingLeft: "0px",
+    backgroundColor:"black",
+    color:"white",
   },
   iconButton: {
+    backgroundColor: "black",
+    color:"white",    
     "&:hover": {
       //you want this to be the same as the backgroundColor above
-      backgroundColor: "white",
+      backgroundColor: "black",
+      color:"white",
     },
     "&:focus": {
       outline: "white",
@@ -53,7 +58,7 @@ const NavBar = () => {
         </Tooltip>
         <Hidden smDown>
           <>
-            <Tooltip title="Apps">
+            <Tooltip title="Apps" >
               <span>
                 <IconButton disabled>
                   <AppsIcon />

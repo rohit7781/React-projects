@@ -9,11 +9,14 @@ import StartNav from "../TopNav/StartNav";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   drawer: {
+    backgroundColor:"#0a0a0a",
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: "nowrap",
   },
   drawerOpen: {
+    backgroundColor:"#0a0a0a",
+    color:"white",
     width: drawerWidth,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -21,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   drawerClose: {
+    backgroundColor:"#0a0a0a",
+    color:"white",
     transition: theme.transitions.create(["width", "margin", "visibility"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,

@@ -23,8 +23,11 @@ import { logoutChannel } from "../../../redux/actions/channel";
 
 const useStyles = makeStyles((theme) => ({
   iconButton: {
+    backgroundColor: "black",
+    color:"white",    
     "&:hover": {
-      backgroundColor: "white",
+      backgroundColor: "black",
+      color:"white",
     },
     "&:focus": {
       outline: "white",
