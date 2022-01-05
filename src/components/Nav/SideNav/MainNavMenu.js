@@ -5,6 +5,7 @@ import { List, Divider, useMediaQuery, useTheme } from "@material-ui/core";
 import { Home as HomeIcon, Whatshot as TrendingIcon } from "@material-ui/icons";
 import menuAuthIcons from "../../menuAuthIcons";
 import NavItem from "../NavItem";
+import Logout from "./Logout";
 import { toggleDrawer } from "../../../redux/actions/layout";
 
 const MainNavMenu = () => {
@@ -27,11 +28,25 @@ const MainNavMenu = () => {
           path: "/",
         },
         {
-          title: "Trending",
+          title: "Explore",
           icon: TrendingIcon,
           path: "/trending",
         },
-        ...menuAuthIcons,
+        {
+          title: "Creator Rewards",
+          icon: TrendingIcon,
+          path: "/trending",
+        },
+        {
+          title: "Your Videos",
+          icon: TrendingIcon,
+          path: "/trending",
+        },
+        {
+          title: "Settings",
+          icon: TrendingIcon,
+          path: "/trending",
+        }
       ].map((item, index) => {
         return (
           <React.Fragment key={index}>
