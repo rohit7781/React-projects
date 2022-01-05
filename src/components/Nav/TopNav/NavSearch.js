@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     padding: theme.spacing(0, 1),
+    color: "white"
   },
 }));
 
