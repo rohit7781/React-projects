@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { InputBase, Button, Tooltip } from "@material-ui/core";
 import { Search as SearchIcon } from "@material-ui/icons";
 import { withRouter } from "react-router";
-
 const useStyles = makeStyles((theme) => ({
   searchButton: {
     color: grey[700],
@@ -30,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
   },
   searchForm: {
     backgroundColor: "#222329",
-    width: "100%",
+    width: "47%"
   },
   input: {
     padding: theme.spacing(0, 1),
+    color: "white"
   },
 }));
 
@@ -60,20 +60,20 @@ const MiddleNav = ({ history }) => {
         classes={{
           input: classes.input,
         }}
-        placeholder="Search…"
+        placeholder="Search a video"
         inputProps={{ "aria-label": "search" }}
         endAdornment={
           <Tooltip title="Search">
-            <Button
+            {/* <Button
               disableRipple
-              size="small"
+              size=""
               type="submit"
               className={classes.searchButton}
               onClick={handleSearch}
               aria-label="search"
             >
-              <SearchIcon fontSize="small" />
-            </Button>
+            </Button> */}
+            <SearchIcon fontSize="small" style={{fill:"white"}} />
           </Tooltip>
         }
       />
