@@ -7,14 +7,14 @@ import { red, grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   active: {
-    backgroundColor: grey[300],
-    "&:hover": { backgroundColor: grey[400] },
+    backgroundColor: "black",
+    "&:hover": { backgroundColor: "#222327" },
   },
   icon: {
     padding: theme.spacing(0, 1),
   },
   iconActive: {
-    color: red[600],
+    color: "white",
   },
   text: {
     color: "inherit" /* blue colors for links too */,

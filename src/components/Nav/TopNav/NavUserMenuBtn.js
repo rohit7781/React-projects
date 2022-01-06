@@ -125,7 +125,7 @@ const NavUserMenuBtn = () => {
               </Grid>
               <Divider />
               <List component="nav" aria-labelledby="nested-list-subheader">
-                <NavItem
+                <NavItem 
                   to={`/channel/${id}`}
                   title={"Your Channel"}
                   icon={ExitToAppIcon}
