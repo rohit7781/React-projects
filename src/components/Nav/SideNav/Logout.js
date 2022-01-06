@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-import { List, Divider, useMediaQuery, useTheme } from "@material-ui/core";
-import { Home as HomeIcon, Whatshot as TrendingIcon } from "@material-ui/icons";
+import { List, useMediaQuery, useTheme } from "@material-ui/core";
+import { Whatshot as TrendingIcon } from "@material-ui/icons";
 import NavItem from "../NavItem";
 import { toggleDrawer } from "../../../redux/actions/layout";
 

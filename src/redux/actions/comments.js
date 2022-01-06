@@ -20,12 +20,12 @@ const addComment = (comment) => {
   };
 };
 
-const setLoading = (isLoading) => {
-  return {
-    type: "SET_LOADING",
-    payload: { isLoading },
-  };
-};
+// const setLoading = (isLoading) => {
+//   return {
+//     type: "SET_LOADING",
+//     payload: { isLoading },
+//   };
+// };
 
 const resetComments = () => {
   return {

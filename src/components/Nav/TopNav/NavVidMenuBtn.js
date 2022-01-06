@@ -17,7 +17,7 @@ import {
 } from "@material-ui/icons";
 import urlJoin from "url-join";
 
-import { setModal, resetUpload } from "../../../redux/actions/upload";
+import { setModal } from "../../../redux/actions/upload";
 import { BACKEND_URL } from "../../../config";
 import NavItem from "../NavItem";
 import UploadModal from "../../Upload/UploadModal";

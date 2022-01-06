@@ -58,6 +58,7 @@ export default function SubscribeBtn({ className, channelId, size }) {
     if (channelId) {
       fetchSubscribed();
     }
+    // eslint-disable-next-line
   }, [channelId]);
 
   return (

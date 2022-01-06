@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { grey } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
-import { InputBase, Button, Tooltip } from "@material-ui/core";
+import { InputBase, Tooltip } from "@material-ui/core";
 import { Search as SearchIcon } from "@material-ui/icons";
 import { withRouter } from "react-router";
 const useStyles = makeStyles((theme) => ({
@@ -41,11 +41,7 @@ const MiddleNav = ({ history }) => {
   const [searchValue, setSearch] = useState("");
   const classes = useStyles();
 
-  const handleSearch = () => {
-    if (searchValue) {
-      history.push(`/results?search_query=${searchValue}`);
-    }
-  };
+
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
