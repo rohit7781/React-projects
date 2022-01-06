@@ -83,11 +83,11 @@ const NavBar = () => {
             </IconButton>
           </Tooltip>
         )}
-
         {isAuth && <NavUserMenuBtn />}
         {isAuth || (
           <SignInBtn size={theme.breakpoints.up("md") ? "medium" : "large"} />
         )}
+        
       </>
     </Toolbar>
   );
