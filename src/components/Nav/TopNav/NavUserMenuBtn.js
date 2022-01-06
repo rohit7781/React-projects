@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import NavItem from "../NavItem";
 import {
-  Tooltip,
+  // Tooltip,
   Avatar,
   Grid,
-  Typography,
+  // Typography,
   List,
   Divider,
   ClickAwayListener,
@@ -33,21 +33,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TooltipHeader = ({ text, children }) => (
-  <Tooltip title={text} placement="right">
-    <div
-      style={{
-        width: "200px",
-      }}
-    >
-      <span>
-        <Typography variant="body2" noWrap>
-          {children || text}
-        </Typography>
-      </span>
-    </div>
-  </Tooltip>
-);
+// const TooltipHeader = ({ text, children }) => (
+//   <Tooltip title={text} placement="right">
+//     <div
+//       style={{
+//         width: "200px",
+//       }}
+//     >
+//       <span>
+//         <Typography variant="body2" noWrap>
+//           {children || text}
+//         </Typography>
+//       </span>
+//     </div>
+//   </Tooltip>
+// );
 
 const NavUserMenuBtn = () => {
   const dispatch = useDispatch();

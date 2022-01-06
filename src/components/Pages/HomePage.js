@@ -54,6 +54,7 @@ const HomePage = () => {
 
   useEffect(() => {
     dispatch(getHomeVideos());
+    // eslint-disable-next-line
   }, []);
   const classes = useStyles();
   let theme = createMuiTheme();

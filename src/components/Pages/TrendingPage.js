@@ -43,6 +43,7 @@ const TrendingPage = ({ location }) => {
 
   useEffect(() => {
     dispatch(getTrendingVideos(categoryId));
+    // eslint-disable-next-line
   }, [categoryId]);
 
   const classes = useStyles();

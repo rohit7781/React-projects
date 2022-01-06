@@ -51,7 +51,6 @@ const SideNav = () => {
   const isMaxScreenSm = useMediaQuery(theme.breakpoints.down("sm"));
 
   const isDrawerOpen = useSelector(({ layout }) => layout.isDrawerOpen);
-  const isAuth = useSelector(({ channel }) => channel.isAuth);
   let isOpen;
   if (isMaxScreenSm) isOpen = isDrawerOpen;
   else isOpen = true; //We will control open by css

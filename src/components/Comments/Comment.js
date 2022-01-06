@@ -9,8 +9,8 @@ import urlJoin from "url-join";
 import { BACKEND_URL } from "../../config";
 import CommentReplies from "./CommentReplies";
 import LikeDislikes from "../LikeDislikes";
+// eslint-disable-next-line
 import CommentForm from "./CommentForm";
-
 const useStyles = makeStyles((theme) => ({
   text: {
     fontWeight: 400,
