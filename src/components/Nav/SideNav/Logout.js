@@ -23,7 +23,7 @@ function Logout() {
           {
             title: "Logout",
             icon: TrendingIcon,
-            path: "/trending",
+            path: "/Logout",
           }
         ].map((item, index) => {
           return (

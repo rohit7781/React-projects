@@ -30,22 +30,22 @@ const MainNavMenu = () => {
         {
           title: "Explore",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/Explore",
         },
         {
           title: "Creator Rewards",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/CreatorRewards",
         },
         {
           title: "Your Videos",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/YourVideos",
         },
         {
           title: "Settings",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/Settings",
         }
       ].map((item, index) => {
         return (
@@ -56,7 +56,6 @@ const MainNavMenu = () => {
               icon={item.icon}
               onClick={handleItemClick}
             />
-            {index === 1 && <Divider />}
           </React.Fragment>
         );
       })}
