@@ -28,34 +28,22 @@ const MainNavMenu = () => {
         {
           title: "Explore",
           icon: TrendingIcon,
-          path: "/Explore",
+          path: "/trending",
         },
         {
           title: "Creator Rewards",
           icon: TrendingIcon,
-<<<<<<< HEAD
           path: "/subscriptions",
-=======
-          path: "/CreatorRewards",
->>>>>>> 3a575c116153cd0d228c14688daad8aad6230731
         },
         {
           title: "Your Videos",
           icon: TrendingIcon,
-<<<<<<< HEAD
           path: "/library",
-=======
-          path: "/YourVideos",
->>>>>>> 3a575c116153cd0d228c14688daad8aad6230731
         },
         {
           title: "Settings",
           icon: TrendingIcon,
-<<<<<<< HEAD
           path: "/history",
-=======
-          path: "/Settings",
->>>>>>> 3a575c116153cd0d228c14688daad8aad6230731
         }
       ].map((item, index) => {
         return (

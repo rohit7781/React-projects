@@ -23,11 +23,7 @@ function Logout() {
           {
             title: "Logout",
             icon: TrendingIcon,
-<<<<<<< HEAD
             path: "/sdfsd",
-=======
-            path: "/Logout",
->>>>>>> 3a575c116153cd0d228c14688daad8aad6230731
           }
         ].map((item, index) => {
           return (
