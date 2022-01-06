@@ -33,17 +33,17 @@ const MainNavMenu = () => {
         {
           title: "Creator Rewards",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/subscriptions",
         },
         {
           title: "Your Videos",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/library",
         },
         {
           title: "Settings",
           icon: TrendingIcon,
-          path: "/trending",
+          path: "/history",
         }
       ].map((item, index) => {
         return (
