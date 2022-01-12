@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { List, useMediaQuery, useTheme } from "@material-ui/core";
 import { Whatshot as TrendingIcon } from "@material-ui/icons";
+import { faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
 import NavItem from "../NavItem";
 import { toggleDrawer } from "../../../redux/actions/layout";
 
@@ -22,7 +23,7 @@ function Logout() {
         {[
           {
             title: "Logout",
-            icon: TrendingIcon,
+            icon: faSignOutAlt,
             path: "/sdfsd",
           }
         ].map((item, index) => {

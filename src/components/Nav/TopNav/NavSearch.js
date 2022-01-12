@@ -22,14 +22,17 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
   },
   border: {
-    borderColor: grey[300],
+    borderColor: grey[700],
     borderStyle: "solid",
     borderWidth: "1px",
-    borderRadius: 0,
+    borderRadius: 3,
   },
   searchForm: {
-    backgroundColor: "#222329",
-    width: "47%"
+    display: 'grid',
+    gridTemplateColumns: '10% 90%',
+    // backgroundColor: "#222329",
+    width: "40%",
+    padding: "0.2rem",
   },
   input: {
     padding: theme.spacing(0, 1),
@@ -47,19 +50,8 @@ const MiddleNav = ({ history }) => {
     setSearch(e.target.value);
   };
   return (
-    <div className={classes.searchForm}>
-      <InputBase
-        fullWidth
-        value={searchValue}
-        onChange={handleSearchChange}
-        className={classes.border}
-        classes={{
-          input: classes.input,
-        }}
-        placeholder="Search a video"
-        inputProps={{ "aria-label": "search" }}
-        endAdornment={
-          <Tooltip title="Search">
+    <div className={`${classes.searchForm} ${classes.border}`} >
+         <Tooltip title="Search">
             {/* <Button
               disableRipple
               size=""
@@ -71,7 +63,16 @@ const MiddleNav = ({ history }) => {
             </Button> */}
             <SearchIcon fontSize="small" style={{fill:"white"}} />
           </Tooltip>
-        }
+      <InputBase
+        fullWidth
+        value={searchValue}
+        onChange={handleSearchChange}
+        // className={classes.border}
+        classes={{
+          input: classes.input,
+        }}
+        placeholder="Search a video"
+        inputProps={{ "aria-label": "search" }}
       />
     </div>
   );
