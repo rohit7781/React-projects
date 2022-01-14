@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import clsx from "clsx";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { red, grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   active: {
