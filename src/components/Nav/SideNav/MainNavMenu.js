@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { List, useMediaQuery, useTheme } from "@material-ui/core";
 import { Home as HomeIcon, Whatshot as TrendingIcon } from "@material-ui/icons";
+import { faHome,faCompass,faChartLine,faPlayCircle,faCog} from '@fortawesome/free-solid-svg-icons'
 import NavItem from "../NavItem";
 import { toggleDrawer } from "../../../redux/actions/layout";
 
@@ -18,31 +19,31 @@ const MainNavMenu = () => {
   };
 
   return (
-    <List>
+    <List style={{paddingTop: "40px"}}>
       {[
         {
           title: "Home",
-          icon: HomeIcon,
+          icon: faHome,
           path: "/",
         },
         {
           title: "Explore",
-          icon: TrendingIcon,
+          icon: faCompass,
           path: "/trending",
         },
         {
           title: "Creator Rewards",
-          icon: TrendingIcon,
+          icon: faChartLine,
           path: "/subscriptions",
         },
         {
           title: "Your Videos",
-          icon: TrendingIcon,
+          icon: faPlayCircle,
           path: "/library",
         },
         {
           title: "Settings",
-          icon: TrendingIcon,
+          icon: faCog,
           path: "/history",
         }
       ].map((item, index) => {

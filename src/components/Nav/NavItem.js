@@ -2,21 +2,28 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import clsx from "clsx";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   active: {
-    backgroundColor: "black",
-    "&:hover": { backgroundColor: "#222327" },
+    backgroundColor: "#222327",
+    color: "white",
+    "&:hover": { backgroundColor: "#222327"},
+  },
+  ListBackground: {
+   "&:hover" :{ backgroundColor: "#222327"},
   },
   icon: {
-    padding: theme.spacing(0, 1),
+    padding: theme.spacing(0, 1),    
+    color:"#626366",
+    fontSize: "1.2rem"
   },
   iconActive: {
     color: "white",
   },
   text: {
-    color: "inherit" /* blue colors for links too */,
+    color: "#626366" /* blue colors for links too */,
     textDecoration: "none" /* no underline */,
     "&:hover": {
       color: "inherit" /* blue colors for links too */,
@@ -43,37 +50,37 @@ const CircleItem = ({ children, title }) => (
     <div>{title}</div>
   </div>
 );
-const NavItem = ({ to, title, icon, onClick, disableActive, type }) => {
+const NavItem = ({ to, title,icon, onClick, disableActive, type }) => {
   const classes = useStyles();
   const location = useLocation();
   const isActive =
     location.pathname === "/trending"
       ? location.pathname + location.search === to
       : location.pathname === to;
-  const Icon = icon;
+  // const Icon = icon;
   const Item =
     type === "secondary" ? (
       <CircleItem title={title}>
-        <Icon />
+      <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
       </CircleItem>
     ) : (
       <ListItem
         button
         onClick={onClick}
-        className={isActive ? classes.active : ""}
+        className={isActive ? `${classes.active} ${classes.ListBackground}` : classes.ListBackground}
       >
         <ListItemIcon
           className={clsx(classes.icon, {
             [classes.iconActive]: isActive && !disableActive,
           })}
         >
-          <Icon />
+        <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
         </ListItemIcon>
         <ListItemText primary={title} />
       </ListItem>
     );
   return to ? (
-    <NavLink to={to} className={classes.text}>
+    <NavLink to={to} className={isActive ? `${classes.active} ${classes.text}` : classes.text}>
       {Item}
     </NavLink>
   ) : (

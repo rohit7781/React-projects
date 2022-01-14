@@ -5,6 +5,7 @@ import NavSearch from "./NavSearch";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    marginLeft: "-21%"
   },
 }));
 
