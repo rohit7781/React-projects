@@ -23,6 +23,10 @@ import NavItem from "../NavItem";
 import UploadModal from "../../Upload/UploadModal";
 
 const useStyles = makeStyles((theme) => ({
+  chngback:{
+    backgroundColor:"purple",
+    color:"white"
+  },
   iconButton: {
     color:"white",
     backgroundColor:"black",
@@ -100,14 +104,14 @@ const NavVideoMenuBtn = () => {
         transition
         disablePortal
       >
-        <Paper>
+        <Paper >
           <ClickAwayListener onClickAway={handleClose}>
-            <MenuList
+            <MenuList className={classes.chngback}
               autoFocusItem={open}
               id="menu-list-grow"
               onKeyDown={handleListKeyDown}
             >
-              <List component="nav" aria-labelledby="nested-list-subheader">
+              <List  component="nav" aria-labelledby="nested-list-subheader">
                 <NavItem
                   title="Upload"
                   icon={TVIcon}

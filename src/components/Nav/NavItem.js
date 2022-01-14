@@ -4,7 +4,6 @@ import clsx from "clsx";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { makeStyles } from "@material-ui/core/styles";
-import { red, grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   active: {
