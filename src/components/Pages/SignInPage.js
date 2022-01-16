@@ -44,7 +44,7 @@ const SignInPage = ({ page }) => {
       })}
     >
       {(() => {
-        if (!isAuth) {
+        if (isAuth) {
           return (
             <>
               <Icon className={classes.icon} />
