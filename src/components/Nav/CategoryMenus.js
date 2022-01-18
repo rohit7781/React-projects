@@ -17,16 +17,18 @@ const useStyles = makeStyles((theme) => ({
     width: "24px",
     height: "24px",
     borderRadius: "50%",
+    zIndex:"10"
   },
   root_h: {
     display: "flex",
     overflowX: "auto",
     justifyContent: "center",
+    flexWrap:"wrap"
   },
-  spacing_h: { margin: "1em" },
+  spacing_h: { display:"flex",flexDirection:"column",justifyContent:"space-evenly",margin: "1em", backgroundColor:"black",width:"15vw",height:"19vh",borderRadius:"9px" },
   img_h: {
-    width: "100%",
-    height: "100%",
+    width: "24px",
+    height: "24px",
     borderRadius: "100%",
   },
 }));

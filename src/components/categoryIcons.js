@@ -7,19 +7,15 @@ import liveIcon from "../assets/live-icon.png";
 
 const icons = [
   {
+    title: "Cryptocurrency",
+    icon: musicIcon,
+  },
+  {
     title: "Music",
     icon: musicIcon,
   },
   {
-    title: "Sports",
-    icon: sportsIcon,
-  },
-  {
-    title: "Gaming",
-    icon: gameIcon,
-  },
-  {
-    title: "Movies & Shows",
+    title: "Entertainment",
     icon: filmIcon,
   },
   {
@@ -27,8 +23,20 @@ const icons = [
     icon: newsIcon,
   },
   {
-    title: "Live",
+    title: "Gaming",
+    icon: gameIcon,
+  },
+  {
+    title: "Travel",
     icon: liveIcon,
   },
+  {
+    title: "Fashion",
+    icon: liveIcon,
+  },
+  {
+    title: "Sports",
+    icon: sportsIcon,
+  }
 ];
 export default icons;
