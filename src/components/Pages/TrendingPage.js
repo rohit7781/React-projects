@@ -49,9 +49,7 @@ const TrendingPage = ({ location }) => {
   const classes = useStyles();
   return (
     <Container maxWidth="xl" className={classes.root}>
-      <Typography variant="h5" className={classes.text}>
-        {capitalize(categories[categoryId]) || "Trending"}
-      </Typography>
+    
       <HorizontalCategoryMenu />
 
       <Divider light className={classes.divider} />
@@ -81,7 +79,7 @@ const TrendingPage = ({ location }) => {
             />
           );
         } else {
-          return "Nothing Trending";
+          return "Vidoes To try";
         }
       })()}
     </Container>
