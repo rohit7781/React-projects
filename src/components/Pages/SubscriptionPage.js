@@ -4,6 +4,8 @@ import axios from "axios";
 
 import VideoGrid from "../Video/VideoGrid";
 import { BACKEND_URL } from "../../config";
+import AnalyticViewer from "../Analytics/AnalyticViewer";
+import OtherAnalytics from "../Analytics/OtherAnalytics";
 
 const api = axios.create({
   withCredentials: true,
@@ -14,8 +16,22 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     padding: theme.spacing(3),
+    backgroundColor: "#1E1240",
   },
+  analyticsContainer: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "1.5rem",
+    height: "100%",
+    width: "100%",
+    justifyContent:"center",
+    [theme.breakpoints.down("sm")]: {
+    gridTemplateColumns: "1fr",
+    width: "70vh",
+    },
+  }
 }));
 
 const HomePage = () => {
@@ -38,11 +54,16 @@ const HomePage = () => {
 
   return (
     <Container maxWidth="xl" className={classes.root}>
-      {videoResults.length ? (
+
+      <div className={classes.analyticsContainer}>
+        <AnalyticViewer />
+        <OtherAnalytics />
+      </div>
+      {/* {videoResults.length ? (
         <VideoGrid type="vertical_2" videos={videoResults} />
       ) : (
         <Typography variant="body1">No subscription videos</Typography>
-      )}
+      )} */}
     </Container>
   );
 };
