@@ -9,7 +9,7 @@ import StartNav from "../TopNav/StartNav";
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   drawer: {
-    backgroundColor:"purple",
+    backgroundColor:"black",
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: "nowrap",
