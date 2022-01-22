@@ -11,10 +11,10 @@ import lollyLogo from "../../../assets/lolly-logo.jpeg";
 const useStyles = makeStyles((theme) => ({
   lollyLogo: {
     height: "25px",
-    width:"110px",
+    width:"120px",
     padding: theme.spacing(0, 1),
     [theme.breakpoints.up("md")]: {
-      height: "40px",
+      height: "25px",
     },
   },
   toolbar: {

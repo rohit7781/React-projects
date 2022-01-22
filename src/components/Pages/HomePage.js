@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   makeStyles,
   Container,
-  Typography,
+  Typography, 
   Divider,
   createMuiTheme,
   responsiveFontSizes,
