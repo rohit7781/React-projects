@@ -42,6 +42,10 @@
     {
         month: "nov",
         progress: 72
+    },
+    {
+        month: "dec",
+        progress: 78
     }
 ]
 

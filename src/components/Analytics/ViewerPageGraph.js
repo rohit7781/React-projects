@@ -1,11 +1,21 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import "./styles.css"
 import {MonthArray} from "./StaticData";
 import ReactTooltip from "react-tooltip";
 
 const ViewerPageGraph = () => {
 
+    const [graphProgress, setGraphProgress] = useState(100)
 
+useEffect(()=> {
+    window.addEventListener("resize", ()=> {
+        window.innerWidth < 400 ? setGraphProgress(60) : window.innerWidth < 540? setGraphProgress(80) :  
+        window.innerWidth < 636? setGraphProgress(90) : setGraphProgress(100)
+    })
+    return ()=> {
+        window.removeEventListener("resize", ()=> console.log("removed"))
+    }
+})
     return (<>
     <div className="graph">
         <h3>Monthly Views</h3>
@@ -23,7 +33,7 @@ const ViewerPageGraph = () => {
             <ReactTooltip className="tool-tip" id={`${key}`} place="left" effect="solid" textColor="black" backgroundColor="white">
              Expenes<br></br>${month.progress * 1000}
             </ReactTooltip>
-                <div className="progress" style={{height: `${window.innerWidth < 420? (month.progress *40)/100 : month.progress}px`}}></div>
+                <div className="progress" style={{height: `${(month.progress * graphProgress)/100}px`}}></div>
                 <div className="hover-details" ></div>
                 <div className="hover-circle-parent" style={{marginBottom: `${month.progress - 4}px`}}>
             <div className="hover-circle-child" data-tip data-for={`${key}`} ></div>

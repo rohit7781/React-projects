@@ -33,7 +33,7 @@ const OtherAnalytics = () => {
     <div className="send-amount-card">
      <p>Pay to</p>
      <div className="id-analytic">
-     <p>sxsfsffdvdgdgdgdgddvfdvdfbdffffgfgrggfgrg</p>
+     <p>Name</p>
      </div>
      <p className="amount-price">Amount</p>
      <input type="number" placeholder="$"/>
