@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { List, ListItem, ListItemText } from "@material-ui/core";
 import { grey } from "@material-ui/core/colors";
 
+import '../../index.css'
+
 import NavItem from "./NavItem";
 import categoryIcons from "../categoryIcons";
 
@@ -68,7 +70,7 @@ const HorizontalCategoryMenu = () => {
     <div className={classes.root_h}>
       {categoryIcons.map((item, index) => {
         return (
-          <div className={classes.spacing_h}>
+          <div className={classes.spacing_h} id="explore-resp">
             <NavItem
               key={index}
               to={`/trending?category=${index}`}

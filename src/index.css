@@ -16,3 +16,24 @@ code {
   display: flex;
   flex-direction: row-reverse;
 }
+
+/* Responsiveness of Explore */
+
+
+  @media  (max-width:620px ) {
+    .makeStyles-spacing_h{
+      width: 18vw;
+    height: 14vh;
+    }
+  }
+  @media  (max-width:481px ) {
+    .makeStyles-spacing_h{
+      width: 23vw;
+    height: 16vh;
+  }
+  }
+  @media  (max-width:380px ) {
+    .makeStyles-spacing_h{
+      width: 30vw;
+}
+  }
