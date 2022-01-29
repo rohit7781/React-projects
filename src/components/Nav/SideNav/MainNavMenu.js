@@ -39,7 +39,7 @@ const MainNavMenu = () => {
         {
           title: "Your Videos",
           icon: faPlayCircle,
-          path: "/library",
+          path: "/videopage",
         },
         {
           title: "Settings",

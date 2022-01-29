@@ -42,15 +42,15 @@ function App() {
           />
           <Route
             exact
-            path="/library"
-            render={(props) => <Library {...props} page="library" />}
+            path="/videopage"
+            render={(props) => <Video {...props} page="videopage" />}
           />
           <Route
             exact
             path="/history"
             render={(props) => <History {...props} page="history" />}
           />
-          <Route exact path="/watch" render={(props) => <Video {...props} />} />
+          {/* <Route exact path="/watch" render={(props) => <Video {...props} />} /> */}
           <Route
             exact
             path="/channel/:id"
