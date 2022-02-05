@@ -3,7 +3,7 @@ import { grey } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
 import { InputBase, Tooltip } from "@material-ui/core";
 import { Search as SearchIcon } from "@material-ui/icons";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   searchButton: {
     color: grey[700],
