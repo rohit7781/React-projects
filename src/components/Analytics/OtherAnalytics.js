@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { faPaperPlane, faEllipsisH, faShieldAlt, faLock, faCheck, faTimes, faLongArrowAltUp, faLongArrowAltDown}from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const OtherAnalytics = () => {
+
+    const [ishidedropdown, setIsHideDropdown ] = useState(false);
+    const[selectedcurrency, setSelectedCurrency] = useState("$");
+    const symbols = ["$","₹","€"];
     return (
     <>
     <div className="other-analytics">
@@ -24,7 +28,18 @@ const OtherAnalytics = () => {
             </div>
         </div>
         <div className="right">
-            <div className="dollor-1 analytic-icon">$</div>
+            <div className="hover-div" onMouseOver={() => setIsHideDropdown(true)} onMouseLeave= {() => setIsHideDropdown(false)}>
+            <div className="dollor-1 analytic-icon">{selectedcurrency}</div>
+            {ishidedropdown && <div className="dropdown-content"> 
+                <ul>
+                {symbols.map((value) => {
+                    return <li onClick={() => {
+                        setIsHideDropdown(false)
+                        setSelectedCurrency(value)}}>{value}</li>;
+                })}
+                </ul>
+            </div>}
+            </div>
             <div className="dollor-2 analytic-icon">S/.</div>
         </div>
         

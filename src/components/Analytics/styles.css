@@ -193,6 +193,47 @@ p {
     margin: 0 1rem 0 1rem;
 }
 
+/* Currency Dropdown */
+.hover-div {
+    height: 3rem;
+}
+.dropdown-content{
+    top: 10rem;
+    width: 3.2rem;
+    position: absolute;
+    background-color:#493d75;
+    border-radius: 1rem;
+}
+
+.dropdown-content ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.dropdown-content ul li {
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.dropdown-content ul li:first-child {
+    border-radius: 1rem 1rem 0 0;
+}
+.dropdown-content ul li:last-child {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.dropdown-content ul li:hover {
+    background-color:#1E1240 ;
+}
+
+/* ..dropdown-content ul li{
+  display:
+} */
+
+
 .dollor-1, .dollor-2 {
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -314,6 +355,7 @@ p {
     background-color: var(--btn-light);
     border-radius: 1rem;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 .key button{
