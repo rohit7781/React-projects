@@ -76,13 +76,7 @@ const HorizontalCategoryMenu = () => {
               to={`/trending?category=${index}`}
               title={item.title}
               type="secondary"
-              icon={() => (
-                <img
-                  className={classes.img_h}
-                  src={item.icon}
-                  alt={item.title + " logo"}
-                />
-              )}
+              icon={item.icon}
             />
           </div>
         );

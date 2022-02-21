@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { faPaperPlane, faEllipsisH, faShieldAlt, faLock, faCheck, faTimes, faLongArrowAltUp, faLongArrowAltDown}from '@fortawesome/free-solid-svg-icons'
+import { faPaperPlane, faEllipsisH, faShieldAlt, faLock, faCheck, faTimes, faLongArrowAltUp, faLongArrowAltDown,faDollarSign}from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const OtherAnalytics = () => {
 
+    const [symbolsArr] = useState(["e", "E", "+", "-", "."]);
     const [ishidedropdown, setIsHideDropdown ] = useState(false);
     const[selectedcurrency, setSelectedCurrency] = useState("$");
     const symbols = ["$","₹","€"];
@@ -51,7 +52,11 @@ const OtherAnalytics = () => {
      <p>Name</p>
      </div>
      <p className="amount-price">Amount</p>
-     <input type="number" placeholder="$"/>
+     <div className="currency-wrap">
+    <span className="currency-code"><FontAwesomeIcon icon={faDollarSign}></FontAwesomeIcon></span>
+     <input type="number" className="number-currency" onKeyDown={e => symbolsArr.includes(e.key) && e.preventDefault()}
+/>
+     </div>
      <button><FontAwesomeIcon icon={faPaperPlane} ></FontAwesomeIcon> Send</button>
     </div>
 

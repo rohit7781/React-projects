@@ -51,46 +51,6 @@ const NavBar = () => {
   const isAuth = useSelector(({ channel }) => channel.isAuth);
   const classes = useStyles();
   const theme = useTheme();
-  const [walletStatus,setWalletStatus] = useState("CONNECT WALLET")
-  const [accountAddress, setAccountAddress] = useState("");
-  const onboarding = new MetaMaskOnboarding();
-  const isMetaMaskInstalled = () => {
-    const { ethereum } = window;
-    return Boolean(ethereum && ethereum.isMetaMask);
-  };
-
-  useEffect(() => {
-    if (accountAddress === "") {
-    isMetaMaskInstalled() ? setWalletStatus("CONNECT WALLET") : setWalletStatus("Install Metamask") 
-  } else {
-    setWalletStatus("CONNECTED")
-  }
-  },[accountAddress])
-
-  const installMetaMask = () => {
-    onboarding.startOnboarding();
-  }
-
-  async function getAccount() {
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    const account = accounts[0];
-    return account;
-  }
-
-  const walletConnect = () => {
-    if (
-      typeof window !== "undefined" &&
-      typeof window.ethereum !== "undefined"
-    ) {
-      getAccount().then((response) => {
-        setAccountAddress(response);
-      });
-    } else {
-      console.log("error");
-    }
-  };
   
   return (
     <Toolbar
@@ -121,12 +81,10 @@ const NavBar = () => {
           </Tooltip>
         )}
         </Hidden>
-        <Tooltip title={`${walletStatus}`} >
+        <Tooltip title="Connect Wallet" >
           <div style={{display:"flex",alignItems:"center",cursor:"pointer",border:"1px solid white",borderRadius: "5px",padding:"2px 2px"}}>
             <ConnectWallet className={classes.walletBtn}/>
-            <p className={classes.walletText} onClick={()=> {
-              walletStatus === "Install Metamask" ? installMetaMask() : walletConnect()
-            }}>{walletStatus}</p>
+            <p className={classes.walletText}>CONNECT WALLET</p>
           </div>
         </Tooltip>
         {isAuth && <NavUserMenuBtn />}

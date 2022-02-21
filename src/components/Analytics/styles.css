@@ -229,9 +229,19 @@ p {
     background-color:#1E1240 ;
 }
 
-/* ..dropdown-content ul li{
-  display:
-} */
+.currency-wrap{
+    position: relative;
+}
+
+.currency-code{
+    position:absolute;
+    left: 0.7rem;
+    top:8px;
+}
+
+.number-currency{
+    padding: 10px 20px;
+}
 
 
 .dollor-1, .dollor-2 {
@@ -252,6 +262,7 @@ p {
     display: flex;
     flex-direction: column;
 }
+
 .send-amount-card p {
     font-size: 1rem;
     font-weight: bolder;
@@ -279,7 +290,7 @@ p {
 }
 
 .send-amount-card input{
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
     width: 30%;
     background-color: var(--btn-light);
     border: none;

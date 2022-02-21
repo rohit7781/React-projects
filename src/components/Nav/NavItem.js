@@ -25,10 +25,15 @@ const useStyles = makeStyles((theme) => ({
   text: {
     color: "#626366" /* blue colors for links too */,
     textDecoration: "none" /* no underline */,
+    textAlign: "center",
     "&:hover": {
       color: "inherit" /* blue colors for links too */,
       textDecoration: "none" /* no underline */,
     },
+  },
+  img_h: {
+    width: "60px",
+    height: "60px",
   },
 }));
 const CircleItem = ({ children, title }) => (
@@ -58,10 +63,16 @@ const NavItem = ({ to, title,icon, onClick, disableActive, type }) => {
       ? location.pathname + location.search === to
       : location.pathname === to;
   // const Icon = icon;
+  console.log(icon)
   const Item =
     type === "secondary" ? (
       <CircleItem title={title}>
-      <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+      {/* <FontAwesomeIcon icon={icon}></FontAwesomeIcon> */}
+      <img
+          className={classes.img_h}
+          src={icon}
+          alt={"logo"}
+      />
       </CircleItem>
     ) : (
       <ListItem

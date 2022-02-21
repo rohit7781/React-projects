@@ -1,14 +1,15 @@
-import musicIcon from "../assets/music-icon.png";
-import sportsIcon from "../assets/soccer-icon.png";
-import gameIcon from "../assets/gaming-icon.png";
-import filmIcon from "../assets/film-icon.png";
-import newsIcon from "../assets/news-icon.png";
-import liveIcon from "../assets/live-icon.png";
-
+import musicIcon from "../assets/music-solid.svg";
+import sportsIcon from "../assets/football-ball-solid.svg";
+import gameIcon from "../assets/gamepad-solid.svg";
+import filmIcon from "../assets/film-solid.svg";
+import newsIcon from "../assets/newspaper-solid.svg";
+import liveIcon from "../assets/plane-departure-solid.svg";
+import crypto from "../assets/btc-brands.svg"
+import fashion from "../assets/tshirt-solid.svg"
 const icons = [
   {
     title: "Cryptocurrency",
-    icon: musicIcon,
+    icon: crypto,
   },
   {
     title: "Music",
@@ -32,7 +33,7 @@ const icons = [
   },
   {
     title: "Fashion",
-    icon: liveIcon,
+    icon: fashion,
   },
   {
     title: "Sports",
