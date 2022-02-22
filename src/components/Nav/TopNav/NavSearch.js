@@ -33,6 +33,15 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor: "#222329",
     width: "40%",
     padding: "0.2rem",
+    [theme.breakpoints.only('lg')]: {
+    marginLeft: '3rem',
+    },
+    [theme.breakpoints.only('md')]: {
+      marginLeft: '3.5rem',
+    },
+    [theme.breakpoints.only('sm')]: {
+      marginLeft: '8rem',
+    },
   },
   input: {
     padding: theme.spacing(0, 1),

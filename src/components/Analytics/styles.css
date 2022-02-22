@@ -554,4 +554,25 @@ p {
       width: 80%;
   }
 }
+@media (min-width: 1600px) {
+    html {
+        font-size: 110%;
+    }
+    .bottom-border {
+        margin-left: 9%;
+        bottom: 42px;
+    }
+    .other-analytics {
+        width: 60vh;
+    }
+}
+
+@media (min-width: 1800px) {
+    .analytic-viewer {
+        width: 110vh;
+    }
+    .other-analytics {
+        width: 70vh;
+    }
+}
 
